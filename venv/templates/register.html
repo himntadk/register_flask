@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+        <style>
+            .pedit{
+                height: 700px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .edit {
+                text-align: center;
+                background-color: orange;
+                width: 350px;
+                height: 350px;
+                box-shadow: 10px 10px grey;
+            }
+            input[type=text] {
+                padding:10px;
+                width: 250px;
+                border:0;
+                box-shadow:0 0 15px 4px rgba(68, 33, 33, 0.06);
+                outline: none;
+                border-radius:10px;
+                opacity: 0.6;
+            }
+            input[type=submit] {
+                padding: 8px;
+                width: 100px;
+                border: 0;
+                box-shadow:0 0 15px 4px rgba(68, 33, 33, 0.06);
+                background-color: green;
+                border-radius:10px;
+                opacity: 0.8;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="pedit">
+        <form class="edit" action="register" method="POST">
+            <h1>Registration Form</h1>
+            <p>
+                
+                <input type="text" name="name" id="name" placeholder="Name">
+            </p>
+            <p>
+                
+                <input type="text" name="email" id="email" placeholder="Email">
+            </p>
+            <p>
+                
+                <input type="text" name="phone" id="phone" placeholder="Phone">
+            </p>
+            <p>
+                <input type="text" name="college" id="address" placeholder="College">
+            </p>
+            <input type="submit" name="submit" id="submit">
+        </form>
+        </div>
+    </body>
+</html>
