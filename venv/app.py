@@ -19,7 +19,11 @@ def home():
 @app.route("/register",methods =['POST','GET'])
 def register():
     if request.method== 'GET':
-       return render_template("register.html")
+       cursor= mysql.connection.cursor()
+       cursor.execute('''SELECT * FROM user''')
+       res= cursor.fetchall()
+       cursor.close()
+       return render_template("register.html",data=res)
     
     if request.method== 'POST':
        name = request.form['name']
@@ -31,6 +35,8 @@ def register():
        mysql.connection.commit()
        cursor.close()
        return "Data inserted successfully"
+
+    
 
 if __name__ == "__main__":
   app.run(host= 'localhost')
